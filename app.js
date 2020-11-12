@@ -37,8 +37,8 @@ const oidc = new ExpressOIDC({
   issuer: "https://dev-2533364.okta.com/oauth2/default",
   client_id: '0oank0ytkIav1QVg45d5',
   client_secret: '2cjR4WS8FyiJdqovlmEiEg5aqB4lGF4AKhybnpjm',
-  //redirect_uri: 'https://softwaredmt.herokuapp.com//users/callback',
-  redirect_uri: 'http://localhost:3000/users/callback',
+  redirect_uri: 'https://softwaredmt.herokuapp.com//users/callback',
+  //redirect_uri: 'http://localhost:3000/users/callback',
   scope: "openid profile",
   routes: {
     login: {
