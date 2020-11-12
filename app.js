@@ -112,18 +112,18 @@ app.use(function(err, req, res, next) {
 });
 
 
-//DATABASE
+/*/DATABASE
 //Create Database Connection
 var pgp = require('pg-promise')();
 
-/**********************
+*********************
   Database Connection information
   host: This defines the ip address of the server hosting our database.  We'll be using localhost and run our database on our local machine (i.e. can't be access via the Internet)
   port: This defines what port we can expect to communicate to our database.  We'll use 5432 to talk with PostgreSQL
   database: This is the name of our specific database.  From our previous lab, we created the football_db database, which holds our football data tables
   user: This should be left as postgres, the default user account created when PostgreSQL was installed
   password: This the password for accessing the database.  You'll need to set a password USING THE PSQL TERMINAL THIS IS NOT A PASSWORD FOR POSTGRES USER ACCOUNT IN LINUX!
-**********************/
+**********************
 const dbConfig = {
 	host: 'ec2-75-101-232-85.compute-1.amazonaws.com',
 	port: 5432,
@@ -133,6 +133,6 @@ const dbConfig = {
 };
 
 var db = pgp(dbConfig);
-//END DATABASE
+//END DATABASE */
 
 module.exports = app;
