@@ -30,15 +30,16 @@ var oktaClient = new okta.Client({
 //random heroku values
 //url: https://dev-9850426.okta.com
 //token: 007Wyzc3B9T-CxLpAsOAUA0IVEIBNd46Kzlo0gvNUm
-//create oidc object to handle login/registration and cookies
 //clientid web: 0oaodab4rSq88NR0v5d5
 //secret: jOx_7ZeOoGEgMahMxGoOIEtQoXo2CUSGxSeBZvcx
+
+//create oidc object to handle login/registration and cookies
 const oidc = new ExpressOIDC({
   issuer: "https://dev-2533364.okta.com/oauth2/default",
   client_id: '0oank0ytkIav1QVg45d5',
   client_secret: '2cjR4WS8FyiJdqovlmEiEg5aqB4lGF4AKhybnpjm',
-  redirect_uri: 'https://softwaredmt.herokuapp.com//users/callback',
-  //redirect_uri: 'http://localhost:3000/users/callback',
+  //redirect_uri: 'https://softwaredmt.herokuapp.com//users/callback', //error attempt
+  redirect_uri: 'http://localhost:3000/users/callback',
   scope: "openid profile",
   routes: {
     login: {
@@ -112,7 +113,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-/*/DATABASE
+/*/DATABASE //causes heroku error
 //Create Database Connection
 var pgp = require('pg-promise')();
 
